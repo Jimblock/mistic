@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Memo - Memory Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mystic Memo</h1>
+            <div class="game-info">
+                <div class="stats">
+                    <span class="moves">Moves: <span id="moves-count">0</span></span>
+                    <span class="timer">Time: <span id="time">00:00</span></span>
+                </div>
+                <button id="restart">Restart</button>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <div class="game-start" id="game-start">
+                <h2>Welcome to Mystic Memo</h2>
+                <p>Match all pairs of mystical symbols to reveal the final secret image!</p>
+                <div class="difficulty">
+                    <button data-difficulty="easy" class="active">Easy (4x3)</button>
+                    <button data-difficulty="medium">Medium (4x4)</button>
+                    <button data-difficulty="hard">Hard (6x4)</button>
+                </div>
+                <button id="start-button">Start Game</button>
+            </div>
+            
+            <div id="game-board" class="game-board hidden"></div>
+            
+            <div id="game-over" class="game-over hidden">
+                <h2>Congratulations!</h2>
+                <p>You've uncovered all the mystical pairs!</p>
+                <div class="final-stats">
+                    <p>Moves: <span id="final-moves">0</span></p>
+                    <p>Time: <span id="final-time">00:00</span></p>
+                </div>
+                <div class="final-image-container">
+                    <img id="final-image" src="images/final-image.jpg" alt="Mystical Final Image">
+                </div>
+                <button id="play-again">Play Again</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Mystic Memo | <a href="about.html">About</a></p>
+        </footer>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
